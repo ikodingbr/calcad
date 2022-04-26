@@ -1,3 +1,41 @@
+$(document).ready(function () {
+    $('#sch5sCurva90RaioCurtoInox').val((0 * 5).toFixed(3).replace('.', ',') + ' KG')
+    $('#sch10sCurva90RaioCurtoInox').val((0 * 6.35).toFixed(3).replace('.', ',') + ' KG')
+    $('#esp8Curva90RaioCurtoInox').val((0 * 8).toFixed(3).replace('.', ',') + ' KG')
+    $('#stdsCurva90RaioCurtoInox').val((0 * 9.53).toFixed(3).replace('.', ',') + ' KG')
+    $('#xssCurva90RaioCurtoInox').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
+    
+    $('#sch5sCurva45RaioCurtoInox').val((0 * 5).toFixed(3).replace('.', ',') + ' KG')
+    $('#sch10sCurva45RaioCurtoInox').val((0 * 6.35).toFixed(3).replace('.', ',') + ' KG')
+    $('#esp8Curva45RaioCurtoInox').val((0 * 8).toFixed(3).replace('.', ',') + ' KG')
+    $('#stdsCurva45RaioCurtoInox').val((0 * 9.53).toFixed(3).replace('.', ',') + ' KG')
+    $('#xssCurva45RaioCurtoInox').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
+    
+    $('#sch5sCurva90RaioLongoInox').val((0 * 5).toFixed(3).replace('.', ',') + ' KG')
+    $('#sch10sCurva90RaioLongoInox').val((0 * 6.35).toFixed(3).replace('.', ',') + ' KG')
+    $('#esp8Curva90RaioLongoInox').val((0 * 8).toFixed(3).replace('.', ',') + ' KG')
+    $('#stdsCurva90RaioLongoInox').val((0 * 9.53).toFixed(3).replace('.', ',') + ' KG')
+    $('#xssCurva90RaioLongoInox').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
+    
+    $('#sch5sCurva90RaioCurtoAc').val((0 * 5).toFixed(3).replace('.', ',') + ' KG')
+    $('#sch10sCurva90RaioCurtoAc').val((0 * 6.35).toFixed(3).replace('.', ',') + ' KG')
+    $('#esp8Curva90RaioCurtoAc').val((0 * 8).toFixed(3).replace('.', ',') + ' KG')
+    $('#stdsCurva90RaioCurtoAc').val((0 * 9.53).toFixed(3).replace('.', ',') + ' KG')
+    $('#xssCurva90RaioCurtoAc').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
+    
+    $('#sch5sCurva45RaioCurtoAc').val((0 * 5).toFixed(3).replace('.', ',') + ' KG')
+    $('#sch10sCurva45RaioCurtoAc').val((0 * 6.35).toFixed(3).replace('.', ',') + ' KG')
+    $('#esp8Curva45RaioCurtoAc').val((0 * 8).toFixed(3).replace('.', ',') + ' KG')
+    $('#stdsCurva45RaioCurtoAc').val((0 * 9.53).toFixed(3).replace('.', ',') + ' KG')
+    $('#xssCurva45RaioCurtoAc').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
+    
+    $('#sch5sCurva90RaioLongoAc').val((0 * 5).toFixed(3).replace('.', ',') + ' KG')
+    $('#sch10sCurva90RaioLongoAc').val((0 * 6.35).toFixed(3).replace('.', ',') + ' KG')
+    $('#esp8Curva90RaioLongoAc').val((0 * 8).toFixed(3).replace('.', ',') + ' KG')
+    $('#stdsCurva90RaioLongoAc').val((0 * 9.53).toFixed(3).replace('.', ',') + ' KG')
+    $('#xssCurva90RaioLongoAc').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
+});
+
 function calcCurva90RaioCurtoInox() {
     var pes = parseFloat(8)
     var dia = parseFloat($('#dnCurva90RaioCurtoInox').val())
