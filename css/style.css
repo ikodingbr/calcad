@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+}
+
+.add-margin-left {
+    margin-left: 5px;
+}
+
+.add-margin-left-30 {
+    margin-left: 30px;
+}
+
+.add-margin-right {
+    margin-right: 5px;
+}
+
+.centralize {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.add-background-white {
+    background-color: white;
+    color: black;
+}
+
+.add-border-gray {
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.col-sm-112 {
+    width: 165px;
+}
+
+.row {
+    margin-bottom: 5px;
+}
+
+.add-margin-top {
+    margin-top: 50px;
+}
