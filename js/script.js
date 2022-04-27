@@ -46,6 +46,12 @@ $(document).ready(function () {
     $('#xssCurva90RaioLongoAc').val((0 * 12.7).toFixed(3).replace('.', ',') + ' KG')
 
     //Hide
+    $('#containerCurva90RaioCurtoInox').hide()
+    $('#containerCurva45RaioCurtoInox').hide()
+    $('#containerCurva90RaioLongoInox').hide()
+    $('#containerCurva90RaioCurtoCarbono').hide()
+    $('#containerCurva45RaioCurtoCarbono').hide()
+    $('#containerCurva90RaioLongoCarbono').hide()
     $('#containerCurvas').hide()
 });
 
