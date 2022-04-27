@@ -2,6 +2,10 @@ body {
     background-color: black;
 }
 
+i {
+    color: red;
+}
+
 .add-margin-left {
     margin-left: 5px;
 }
@@ -44,4 +48,19 @@ body {
 
 .add-margin-top {
     margin-top: 50px;
+}
+
+.navegador {
+    background-color: black;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
