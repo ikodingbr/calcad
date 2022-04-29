@@ -12,4 +12,4 @@ function ShowHide(modal) {
 
   $(`#${modal}`).show(500);
   $("footer").show(500);
-}
+};

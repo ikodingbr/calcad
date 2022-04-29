@@ -11,7 +11,7 @@ function calculeCurva90RaioCurto() {
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoCurva90RaioCurto").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
     $("#pesoBrutoCurva90RaioCurto").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
-}
+};
 
 function calculeCurva45RaioCurto() {
     var diametro = parseFloat($("#dnCurva45RaioCurto").val());
@@ -23,7 +23,7 @@ function calculeCurva45RaioCurto() {
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoCurva45RaioCurto").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
     $("#pesoBrutoCurva45RaioCurto").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
-}
+};
 
 function calculeCurva90RaioLongo() {
     var diametro = parseFloat($("#dnCurva90RaioLongo").val());
@@ -35,4 +35,4 @@ function calculeCurva90RaioLongo() {
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoCurva90RaioLongo").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
     $("#pesoBrutoCurva90RaioLongo").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
-}
+};

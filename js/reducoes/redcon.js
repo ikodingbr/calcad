@@ -13,7 +13,7 @@ function calculeReducaoExcentrica() {
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoReducaoExcentrica").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
     $("#pesoBrutoReducaoExcentrica").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
-}
+};
 
 function calculeReducaoConcentrica() {
     var bocaMaior = parseFloat($("#bocaMaiorReducaoConcentrica").val());
@@ -28,4 +28,4 @@ function calculeReducaoConcentrica() {
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoReducaoConcentrica").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
     $("#pesoBrutoReducaoConcentrica").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
-}
+};
