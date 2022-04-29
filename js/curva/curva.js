@@ -1,6 +1,3 @@
-var pesoAço = parseFloat(7.850);
-var pi = parseFloat(3.14);
-
 function calculeCurva90RaioCurto() {
     var diametro = parseFloat($("#dnCurva90RaioCurto").val());
     var espessura = parseFloat($("#espessuraCurva90RaioCurto").val());

@@ -1,5 +1,3 @@
-var pesoAço = parseFloat(7.850);
-
 function calculeReducaoExcentrica() {
     var bocaMaior = parseFloat($("#bocaMaiorReducaoExcentrica").val());
     var bocaMenor = parseFloat($("#bocaMenorReducaoExcentrica").val());
