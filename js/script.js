@@ -7,7 +7,9 @@ $(document).ready(function () {
 
 function ShowHide(modal) {
   $("#apresentation").hide();
-  if (lastShowed != "") $(`#${lastShowed}`).hide();
-  lastShowed = modal;
-  $(`#${modal}`).fadeIn(500);
+  $("footer").hide();
+  $(".modalWindow").hide();
+
+  $(`#${modal}`).show(500);
+  $("footer").show(500);
 }
