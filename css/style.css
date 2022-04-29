@@ -1,5 +1,9 @@
-b {
-  color: red;
+.boldInox {
+  color: rgb(90, 90, 255);
+}
+
+.boldCarbono {
+  color: rgb(255, 90, 90);
 }
 
 .modalWindow {

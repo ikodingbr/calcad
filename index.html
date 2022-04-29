@@ -47,13 +47,13 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurtoInox')">Raio
-                                    curto (inox)</a></li>
+                                    curto <b class="boldInox">inox</b></a></li>
                             <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongoInox')">Raio
-                                    longo (inox)</a></li>
+                                    longo <b class="boldInox">inox</b></a></li>
                             <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurtoCarbono')">Raio
-                                    curto (carbono)</a></li>
+                                    curto <b class="boldCarbono">carbono</b></a></li>
                             <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongoCarbono')">Raio
-                                    longo (carbono)</a></li>
+                                    longo <b class="boldCarbono">carbono</b></a></li>
                         </ul>
                     </li>
 
@@ -64,9 +64,9 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurtoInox')">Raio
-                                    curto (inox)</a></li>
+                                    curto <b class="boldInox">inox</b></a></li>
                             <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurtoCarbono')">Raio
-                                    curto (carbono)</a></li>
+                                    curto <b class="boldCarbono">carbono</b></a></li>
                         </ul>
                     </li>
 
@@ -77,18 +77,19 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" onclick="ShowHide('modalReducaoExcentricaInox')">Excêntrica
-                                    (inox)
+                                    <b class="boldInox">inox</b>
                                     (FINALIZAR)</a>
                             </li>
                             <li><a class="dropdown-item" onclick="ShowHide('modalReducaoConcentricaInox')">Concêntrica
-                                    (inox)</a>
+                                    <b class="boldInox">inox</b></a>
                             </li>
                             <li><a class="dropdown-item" onclick="ShowHide('modalReducaoExcentricaCarbono')">Excêntrica
-                                    (carbono)
+                                    <b class="boldCarbono">carbono</b>
                                     (FINALIZAR)</a>
                             </li>
                             <li><a class="dropdown-item"
-                                    onclick="ShowHide('modalReducaoConcentricaCarbono')">Concêntrica (carbono)</a>
+                                    onclick="ShowHide('modalReducaoConcentricaCarbono')">Concêntrica <b
+                                        class="boldCarbono">carbono</b></a>
                             </li>
                         </ul>
                     </li>
@@ -109,7 +110,7 @@
         <div class="container">
             <!-- BEGIN modalCurva90RaioCurtoInox -->
             <div class="container modalWindow" id="modalCurva90RaioCurtoInox">
-                <h3 class="text-center margin-top-10">CURVA 90° <b>RAIO CURTO INOX</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldInox">RAIO CURTO INOX</b></h3>
 
                 <hr>
 
@@ -120,7 +121,8 @@
                         <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioCurtoInox"
                             placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculeCurva90RaioCurtoInox()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="calculeCurva90RaioCurtoInox()">CALCULAR</button>
                 </div>
 
                 <hr>
@@ -138,7 +140,7 @@
 
             <!-- BEGIN modalCurva45RaioCurtoInox -->
             <div class="container modalWindow" id="modalCurva45RaioCurtoInox">
-                <h3 class="text-center margin-top-10">CURVA 45° <b>RAIO CURTO INOX</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 45° <b class="boldInox">RAIO CURTO INOX</b></h3>
 
                 <hr>
 
@@ -149,7 +151,8 @@
                         <input type="number" class="form-control margin-right-5" id="espessuraCurva45RaioCurtoInox"
                             placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculeCurva45RaioCurtoInox()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="calculeCurva45RaioCurtoInox()">CALCULAR</button>
                 </div>
 
                 <hr>
@@ -167,7 +170,7 @@
 
             <!-- BEGIN modalCurva90RaioLongoInox -->
             <div class="container modalWindow" id="modalCurva90RaioLongoInox">
-                <h3 class="text-center margin-top-10">CURVA 90° <b>RAIO LONGO INOX</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldInox">RAIO LONGO INOX</b></h3>
 
                 <hr>
 
@@ -178,7 +181,8 @@
                         <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioLongoInox"
                             placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculeCurva90RaioLongoInox()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="calculeCurva90RaioLongoInox()">CALCULAR</button>
                 </div>
 
                 <hr>
@@ -196,7 +200,7 @@
 
             <!-- BEGIN modalReducaoExcentricaInox -->
             <div class="container modalWindow" id="modalReducaoExcentricaInox">
-                <h3 class="text-center margin-top-10">REDUÇÃO <b>EXCÊNTRICA INOX</b></h3>
+                <h3 class="text-center margin-top-10">REDUÇÃO <b class="boldInox">EXCÊNTRICA INOX</b></h3>
 
                 <hr>
 
@@ -230,7 +234,7 @@
 
             <!-- BEGIN modalReducaoConcentricaInox -->
             <div class="container modalWindow" id="modalReducaoConcentricaInox">
-                <h3 class="text-center margin-top-10">REDUÇÃO <b>CONCÊNTRICA INOX</b></h3>
+                <h3 class="text-center margin-top-10">REDUÇÃO <b class="boldInox">CONCÊNTRICA INOX</b></h3>
 
                 <hr>
 
@@ -265,7 +269,7 @@
 
             <!-- BEGIN modalCurva90RaioCurtoCarbono -->
             <div class="container modalWindow" id="modalCurva90RaioCurtoCarbono">
-                <h3 class="text-center margin-top-10">CURVA 90° <b>RAIO CURTO CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldCarbono">RAIO CURTO CARBONO</b></h3>
 
                 <hr>
 
@@ -276,7 +280,8 @@
                         <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioCurtoCarbono"
                             placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculeCurva90RaioCurtoCarbono()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="calculeCurva90RaioCurtoCarbono()">CALCULAR</button>
                 </div>
 
                 <hr>
@@ -295,7 +300,7 @@
 
             <!-- BEGIN modalCurva45RaioCurtoCarbono -->
             <div class="container modalWindow" id="modalCurva45RaioCurtoCarbono">
-                <h3 class="text-center margin-top-10">CURVA 45° <b>RAIO CURTO CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 45° <b class="boldCarbono">RAIO CURTO CARBONO</b></h3>
 
                 <hr>
 
@@ -306,7 +311,8 @@
                         <input type="number" class="form-control margin-right-5" id="espessuraCurva45RaioCurtoCarbono"
                             placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculeCurva45RaioCurtoCarbono()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="calculeCurva45RaioCurtoCarbono()">CALCULAR</button>
                 </div>
 
                 <hr>
@@ -325,7 +331,7 @@
 
             <!-- BEGIN modalCurva90RaioLongoCarbono -->
             <div class="container modalWindow" id="modalCurva90RaioLongoCarbono">
-                <h3 class="text-center margin-top-10">CURVA 90° <b>RAIO LONGO CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldCarbono">RAIO LONGO CARBONO</b></h3>
 
                 <hr>
 
@@ -336,7 +342,8 @@
                         <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioLongoCarbono"
                             placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculeCurva90RaioLongoCarbono()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="calculeCurva90RaioLongoCarbono()">CALCULAR</button>
                 </div>
 
                 <hr>
@@ -355,7 +362,7 @@
 
             <!-- BEGIN modalReducaoExcentricaCarbono -->
             <div class="container modalWindow" id="modalReducaoExcentricaCarbono">
-                <h3 class="text-center margin-top-10">REDUÇÃO <b>EXCÊNTRICA CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">REDUÇÃO <b class="boldCarbono">EXCÊNTRICA CARBONO</b></h3>
 
                 <hr>
 
@@ -391,7 +398,7 @@
 
             <!-- BEGIN modalReducaoConcentricaCarbono -->
             <div class="container modalWindow" id="modalReducaoConcentricaCarbono">
-                <h3 class="text-center margin-top-10">REDUÇÃO <b>CONCÊNTRICA CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">REDUÇÃO <b class="boldCarbono">CONCÊNTRICA CARBONO</b></h3>
 
                 <hr>
 
