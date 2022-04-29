@@ -2,6 +2,7 @@
 var lastShowed = '';
 var pesoAço = parseFloat(7.85);
 var pi = parseFloat(3.14);
+var num = parseInt(1);
 
 $(document).ready(function () {
   $('.resultButton').val(parseFloat(0).toFixed(2) + ' KG');
@@ -37,3 +38,7 @@ function toggleDarkMode() {
     $('.modalWindow').css('border', '1px solid rgb(0, 0, 0)');
   };
 };
+
+$(document).keydown(function (e) {
+  console.log(keyCode);
+});
