@@ -18,7 +18,27 @@ function ShowHide(modal) {
 };
 
 function refresh() {
+  if ($('.toggleMaterial').css('background-color') == 'rgb(46, 46, 46)') {
+    $('.toggleMaterial').css('background-color', 'rgb(255, 255, 255)');
+    $('.toggleMaterial').css('background', 'rgb(46, 46, 46)');
+  };
+
   $('.modalWindow').hide();
   $('#apresentation').fadeIn(1000);
   $('footer').fadeIn(1000);
+};
+
+function toggleDarkMode() {
+  if ($('.toggleMaterial').css('background-color') == 'rgb(255, 255, 255)') {
+    $('.toggleMaterial').css('background-color', 'rgb(46, 46, 46)');
+    $('.toggleMaterial').css('color', 'rgb(255, 255, 255)');
+
+    $('.modalWindow').css('border', '1px solid rgb(255, 255, 255)');
+  }
+  else if ($('.toggleMaterial').css('background-color') == 'rgb(46, 46, 46)') {
+    $('.toggleMaterial').css('background-color', 'rgb(255, 255, 255)');
+    $('.toggleMaterial').css('color', 'rgb(46, 46, 46)');
+
+    $('.modalWindow').css('border', '1px solid rgb(0, 0, 0)');
+  };
 };

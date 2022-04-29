@@ -17,10 +17,15 @@
     <script src="./js/reducoes/redcon.js"></script>
 </head>
 
-<body>
+<body class="toggleMaterial">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" onclick="refresh()">CalCAD</a>
+
+            <label class="switch align-self-end">
+                <input type="checkbox" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,8 +38,10 @@
                             Curvas 90°
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurto')">Raio curto</a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongo')">Raio longo</a></li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurto')">Raio
+                                    curto</a></li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongo')">Raio
+                                    longo</a></li>
                         </ul>
                     </li>
 
@@ -44,7 +51,8 @@
                             Curvas 45°
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurto')">Raio curto</a></li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurto')">Raio
+                                    curto</a></li>
                         </ul>
                     </li>
 
@@ -243,7 +251,7 @@
 
         <hr class="margin-top-20 margin-bottom-35 modalWindow">
 
-        <footer class="text-center text-lg-start">
+        <footer class="text-center text-lg-start toggleMaterial">
             <hr>
 
             <div class="text-center p-3">
