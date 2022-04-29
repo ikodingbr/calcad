@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./css/lib.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/inox/curva/curvaInox.js"></script>
-    <script src="./js/carbono/curva/curvacarbono.js"></script>
+    <script src="./js/curva/curva.js"></script>
+    <script src="./js/reducoes/redcon.js"></script>
 </head>
 
 <body>
@@ -33,14 +33,8 @@
                             Curvas 90°
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurtoInox')">Raio curto -
-                                    INOX</a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongoInox')">Raio longo -
-                                    INOX</a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurtoAc')">Raio curto -
-                                    CARBONO</a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongoAc')">Raio longo -
-                                    CARBONO</a></li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioCurto')">Raio curto</a></li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90RaioLongo')">Raio longo</a></li>
                         </ul>
                     </li>
 
@@ -50,10 +44,20 @@
                             Curvas 45°
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurtoInox')">Raio curto -
-                                    INOX</a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurtoAc')">Raio curto -
-                                    CARBONO</a></li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45RaioCurto')">Raio curto</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Redução
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" onclick="ShowHide('modalReducaoExcentrica')">Excêntrica</a>
+                            </li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalReducaoConcentrica')">Concêntrica</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -71,193 +75,165 @@
         <hr class="margin-top-35 margin-bottom-20 modalWindow">
 
         <div class="container">
-            <!-- BEGIN modalCurva90RaioCurtoInox -->
-            <div class="container modalWindow" id="modalCurva90RaioCurtoInox">
-                <h3 class="text-center margin-top-10">CURVA 90° RAIO CURTO <b>INOXIDÁVEL</b></h3>
+            <!-- BEGIN modalCurva90RaioCurto -->
+            <div class="container modalWindow" id="modalCurva90RaioCurto">
+                <h3 class="text-center margin-top-10">CURVA 90° <b>RAIO CURTO</b></h3>
 
                 <hr>
 
                 <div class="d-flex justify-content-center">
                     <div class="col margin-right-5">
-                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
-                            id="dnCurva90RaioCurtoInox" aria-describedby="helpId" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioCurtoInox"
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5" id="dnCurva90RaioCurto"
+                            aria-describedby="helpId" placeholder="DN">
+                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioCurto"
                             aria-describedby="helpId" placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary"
-                        onclick="calculeCurva90RaioCurtoInox()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary" onclick="calculeCurva90RaioCurto()">CALCULAR</button>
                 </div>
 
                 <hr>
 
                 <div class="col margin-bottom-5">
                     <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90RaioCurtoInox"
+                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90RaioCurto"
                         aria-describedby="helpId" readonly>
                 </div>
                 <div class="col  margin-bottom-10">
                     <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90RaioCurtoInox"
+                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90RaioCurto"
                         aria-describedby="helpId" readonly>
                 </div>
             </div>
             <!-- END -->
 
-            <!-- BEGIN modalCurva45RaioCurtoInox -->
-            <div class="container modalWindow" id="modalCurva45RaioCurtoInox">
-                <h3 class="text-center margin-top-10">CURVA 45° RAIO CURTO <b>INOXIDÁVEL</b></h3>
+            <!-- BEGIN modalCurva45RaioCurto -->
+            <div class="container modalWindow" id="modalCurva45RaioCurto">
+                <h3 class="text-center margin-top-10">CURVA 45° <b>RAIO CURTO</b></h3>
 
                 <hr>
 
                 <div class="d-flex justify-content-center">
                     <div class="col margin-right-5">
-                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
-                            id="dnCurva45RaioCurtoInox" aria-describedby="helpId" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva45RaioCurtoInox"
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5" id="dnCurva45RaioCurto"
+                            aria-describedby="helpId" placeholder="DN">
+                        <input type="number" class="form-control margin-right-5" id="espessuraCurva45RaioCurto"
                             aria-describedby="helpId" placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary"
-                        onclick="calculeCurva45RaioCurtoInox()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary" onclick="calculeCurva45RaioCurto()">CALCULAR</button>
                 </div>
 
                 <hr>
 
                 <div class="col margin-bottom-5">
                     <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45RaioCurtoInox"
+                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45RaioCurto"
                         aria-describedby="helpId" readonly>
                 </div>
                 <div class="col  margin-bottom-10">
                     <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva45RaioCurtoInox"
+                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva45RaioCurto"
                         aria-describedby="helpId" readonly>
                 </div>
             </div>
             <!-- END -->
 
-            <!-- BEGIN modalCurva90RaioLongoInox -->
-            <div class="container modalWindow" id="modalCurva90RaioLongoInox">
-                <h3 class="text-center margin-top-10">CURVA 90° RAIO LONGO <b>INOXIDÁVEL</b></h3>
+            <!-- BEGIN modalCurva90RaioLongo -->
+            <div class="container modalWindow" id="modalCurva90RaioLongo">
+                <h3 class="text-center margin-top-10">CURVA 90° <b>RAIO LONGO</b></h3>
 
                 <hr>
 
                 <div class="d-flex justify-content-center">
                     <div class="col margin-right-5">
-                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
-                            id="dnCurva90RaioLongoInox" aria-describedby="helpId" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioLongoInox"
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5" id="dnCurva90RaioLongo"
+                            aria-describedby="helpId" placeholder="DN">
+                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioLongo"
                             aria-describedby="helpId" placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary"
-                        onclick="calculeCurva90RaioLongoInox()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary" onclick="calculeCurva90RaioLongo()">CALCULAR</button>
                 </div>
 
                 <hr>
 
                 <div class="col margin-bottom-5">
                     <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90RaioLongoInox"
+                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90RaioLongo"
                         aria-describedby="helpId" readonly>
                 </div>
                 <div class="col  margin-bottom-10">
                     <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90RaioLongoInox"
+                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90RaioLongo"
                         aria-describedby="helpId" readonly>
                 </div>
             </div>
             <!-- END -->
 
-            <!-- BEGIN modalCurva90RaioCurtoAc -->
-            <div class="container modalWindow" id="modalCurva90RaioCurtoAc">
-                <h3 class="text-center margin-top-10">CURVA 90° RAIO CURTO <b>CARBONO</b></h3>
+            <!-- BEGIN modalReducaoExcentrica -->
+            <div class="container modalWindow" id="modalReducaoExcentrica">
+                <h3 class="text-center margin-top-10">REDUÇÃO <b>EXCÊNTRICA</b></h3>
 
                 <hr>
 
                 <div class="d-flex justify-content-center">
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
-                            id="dnCurva90RaioCurtoAc" aria-describedby="helpId" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioCurtoAc"
+                            id="bocaMaiorReducaoExcentrica" aria-describedby="helpId" placeholder="Boca maior">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="bocaMenorReducaoExcentrica" aria-describedby="helpId" placeholder="Boca menor">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="alturaReducaoExcentrica" aria-describedby="helpId" placeholder="Altura">
+                        <input type="number" class="form-control margin-right-5" id="espessuraReducaoExcentrica"
                             aria-describedby="helpId" placeholder="Espessura">
                     </div>
-                    <button type="button" class="btn btn-primary"
-                        onclick="calculeCurva90RaioCurtoAc()">CALCULAR</button>
+                    <button type="button" class="btn btn-primary" onclick="calculeReducaoExcentrica()">CALCULAR</button>
                 </div>
 
                 <hr>
 
                 <div class="col margin-bottom-5">
                     <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90RaioCurtoAc"
+                    <input type="text" class="form-control resultButton" id="pesoLiquidoReducaoExcentrica"
                         aria-describedby="helpId" readonly>
                 </div>
                 <div class="col  margin-bottom-10">
                     <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90RaioCurtoAc"
+                    <input type="text" class="form-control resultButton" id="pesoBrutoReducaoExcentrica"
                         aria-describedby="helpId" readonly>
                 </div>
             </div>
             <!-- END -->
 
-            <!-- BEGIN modalCurva45RaioCurtoAc -->
-            <div class="container modalWindow" id="modalCurva45RaioCurtoAc">
-                <h3 class="text-center margin-top-10">CURVA 45° RAIO CURTO <b>CARBONO</b></h3>
+            <!-- BEGIN modalReducaoConcentrica -->
+            <div class="container modalWindow" id="modalReducaoConcentrica">
+                <h3 class="text-center margin-top-10">REDUÇÃO <b>CONCÊNTRICA</b></h3>
 
                 <hr>
 
                 <div class="d-flex justify-content-center">
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
-                            id="dnCurva45RaioCurtoAc" aria-describedby="helpId" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva45RaioCurtoAc"
-                            aria-describedby="helpId" placeholder="Espessura">
-                    </div>
-                    <button type="button" class="btn btn-primary"
-                        onclick="calculeCurva45RaioCurtoAc()">CALCULAR</button>
-                </div>
-
-                <hr>
-
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45RaioCurtoAc"
-                        aria-describedby="helpId" readonly>
-                </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva45RaioCurtoAc"
-                        aria-describedby="helpId" readonly>
-                </div>
-            </div>
-            <!-- END -->
-
-            <!-- BEGIN modalCurva90RaioLongoAc -->
-            <div class="container modalWindow" id="modalCurva90RaioLongoAc">
-                <h3 class="text-center margin-top-10">CURVA 90° RAIO LONGO <b>CARBONO</b></h3>
-
-                <hr>
-
-                <div class="d-flex justify-content-center">
-                    <div class="col margin-right-5">
+                            id="bocaMaiorReducaoConcentrica" aria-describedby="helpId" placeholder="Boca maior">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
-                            id="dnCurva90RaioLongoAc" aria-describedby="helpId" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90RaioLongoAc"
+                            id="bocaMenorReducaoConcentrica" aria-describedby="helpId" placeholder="Boca menor">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="alturaReducaoConcentrica" aria-describedby="helpId" placeholder="Altura">
+                        <input type="number" class="form-control margin-right-5" id="espessuraReducaoConcentrica"
                             aria-describedby="helpId" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
-                        onclick="calculeCurva90RaioLongoAc()">CALCULAR</button>
+                        onclick="calculeReducaoConcentrica()">CALCULAR</button>
                 </div>
 
                 <hr>
 
                 <div class="col margin-bottom-5">
                     <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90RaioLongoAc"
+                    <input type="text" class="form-control resultButton" id="pesoLiquidoReducaoConcentrica"
                         aria-describedby="helpId" readonly>
                 </div>
                 <div class="col  margin-bottom-10">
                     <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90RaioLongoAc"
+                    <input type="text" class="form-control resultButton" id="pesoBrutoReducaoConcentrica"
                         aria-describedby="helpId" readonly>
                 </div>
             </div>
@@ -268,7 +244,7 @@
 
         <footer class="text-center text-lg-start">
             <hr>
-            
+
             <div class="text-center p-3">
                 © 2022 Copyright:
                 <a style="text-decoration: none;">Desenvolvido por Gabriel Freitas - (19) 9 9895-3914
