@@ -18,11 +18,6 @@ function ShowHide(modal) {
 };
 
 function refresh() {
-  if ($('.toggleMaterial').css('background-color') == 'rgb(46, 46, 46)') {
-    $('.toggleMaterial').css('background-color', 'rgb(255, 255, 255)');
-    $('.toggleMaterial').css('background', 'rgb(46, 46, 46)');
-  };
-
   $('.modalWindow').hide();
   $('#apresentation').fadeIn(1000);
   $('footer').fadeIn(1000);
