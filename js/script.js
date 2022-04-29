@@ -1,8 +1,9 @@
-//Global variables
+//BEGIN Global variables
 var lastShowed = '';
-var pesoAço = parseFloat(7.85);
+var pesoAçoCarbono = parseFloat(7.85);
+var pesoAçoInox = parseFloat(8);
 var pi = parseFloat(3.14);
-var num = parseInt(1);
+//END Global variables
 
 $(document).ready(function () {
   $('.resultButton').val(parseFloat(0).toFixed(2) + ' KG');
@@ -38,7 +39,3 @@ function toggleDarkMode() {
     $('.modalWindow').css('border', '1px solid rgb(0, 0, 0)');
   };
 };
-
-$(document).keydown(function (e) {
-  console.log(keyCode);
-});
