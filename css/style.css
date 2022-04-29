@@ -11,3 +11,7 @@ b {
 .modalWindow {
   margin-top: 15%;
 }
+
+.navbar-brand {
+  cursor: pointer;
+}
