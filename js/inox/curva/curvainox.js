@@ -1,35 +1,35 @@
-function calculeCurva90RaioCurtoInox() {
-    var diametro = parseFloat($("#dnCurva90RaioCurtoInox").val());
-    var espessura = parseFloat($("#espessuraCurva90RaioCurtoInox").val());
-    var peso = parseFloat(((((diametro * pi) / 2) * (diametro * pi)) / 1000000) * pesoAçoInox * espessura);
-    var pesoLiquido = parseFloat(peso);
-    var pesoBruto = parseFloat(peso * 1.05);
+function calculeCurva90GomadaRaioCurtoInox() {
+    let diametro = parseFloat($("#dnCurva90GomadaRaioCurtoInox").val());
+    let espessura = parseFloat($("#espessuraCurva90GomadaRaioCurtoInox").val());
+    let peso = parseFloat(((((diametro * pi) / 2) * (diametro * pi)) / 1000000) * pesoAçoInox * espessura);
+    let pesoLiquido = parseFloat(peso);
+    let pesoBruto = parseFloat(peso * 1.05);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
-    $("#pesoLiquidoCurva90RaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
-    $("#pesoBrutoCurva90RaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoLiquidoCurva90GomadaRaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoBrutoCurva90GomadaRaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
 };
 
-function calculeCurva45RaioCurtoInox() {
-    var diametro = parseFloat($("#dnCurva45RaioCurtoInox").val());
-    var espessura = parseFloat($("#espessuraCurva45RaioCurtoInox").val());
-    var peso = parseFloat(((((diametro * pi) / 2) * (diametro * pi)) / 1000000) * pesoAçoInox * espessura);
-    var pesoLiquido = parseFloat(peso / 2);
-    var pesoBruto = parseFloat((peso / 2) * 1.05);
+function calculeCurva45GomadaRaioCurtoInox() {
+    let diametro = parseFloat($("#dnCurva45GomadaRaioCurtoInox").val());
+    let espessura = parseFloat($("#espessuraCurva45GomadaRaioCurtoInox").val());
+    let peso = parseFloat(((((diametro * pi) / 2) * (diametro * pi)) / 1000000) * pesoAçoInox * espessura);
+    let pesoLiquido = parseFloat(peso / 2);
+    let pesoBruto = parseFloat((peso / 2) * 1.05);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
-    $("#pesoLiquidoCurva45RaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
-    $("#pesoBrutoCurva45RaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoLiquidoCurva45GomadaRaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoBrutoCurva45GomadaRaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
 };
 
-function calculeCurva90RaioLongoInox() {
-    var diametro = parseFloat($("#dnCurva90RaioLongoInox").val());
-    var espessura = parseFloat($("#espessuraCurva90RaioLongoInox").val());
-    var peso = parseFloat((((((diametro * 1.5) * pi) / 2) * (diametro * pi)) / 1000000) * pesoAçoInox * espessura);
-    var pesoLiquido = parseFloat(peso);
-    var pesoBruto = parseFloat((peso) * 1.05);
+function calculeCurva90GomadaRaioLongoInox() {
+    let diametro = parseFloat($("#dnCurva90GomadaRaioLongoInox").val());
+    let espessura = parseFloat($("#espessuraCurva90GomadaRaioLongoInox").val());
+    let peso = parseFloat((((((diametro * 1.5) * pi) / 2) * (diametro * pi)) / 1000000) * pesoAçoInox * espessura);
+    let pesoLiquido = parseFloat(peso);
+    let pesoBruto = parseFloat((peso) * 1.05);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
-    $("#pesoLiquidoCurva90RaioLongoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
-    $("#pesoBrutoCurva90RaioLongoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoLiquidoCurva90GomadaRaioLongoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoBrutoCurva90GomadaRaioLongoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
 };

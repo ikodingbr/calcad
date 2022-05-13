@@ -1,12 +1,12 @@
 function calculeReducaoExcentricaInox() {
-    var bocaMaior = parseFloat($("#bocaMaiorReducaoExcentricaInox").val());
-    var bocaMenor = parseFloat($("#bocaMenorReducaoExcentricaInox").val());
-    var espessura = parseFloat($("#espessuraReducaoExcentricaInox").val());
-    var altura = parseFloat($("#alturaReducaoExcentricaInox").val());
-    var geratriz = parseFloat((((bocaMaior - bocaMenor) / 2) ** 2 + (altura ** 2)) ** 0.5);
-    var area = parseFloat((geratriz * 3.14) * ((bocaMaior / 2) + (bocaMenor / 2)));
-    var pesoLiquido = parseFloat((area * pesoAçoInox * espessura) / 1000000);
-    var pesoBruto = parseFloat(0);
+    let bocaMaior = parseFloat($("#bocaMaiorReducaoExcentricaInox").val());
+    let bocaMenor = parseFloat($("#bocaMenorReducaoExcentricaInox").val());
+    let espessura = parseFloat($("#espessuraReducaoExcentricaInox").val());
+    let altura = parseFloat($("#alturaReducaoExcentricaInox").val());
+    let geratriz = parseFloat((((bocaMaior - bocaMenor) / 2) ** 2 + (altura ** 2)) ** 0.5);
+    let area = parseFloat((geratriz * 3.14) * ((bocaMaior / 2) + (bocaMenor / 2)));
+    let pesoLiquido = parseFloat((area * pesoAçoInox * espessura) / 1000000);
+    let pesoBruto = parseFloat(0);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoReducaoExcentricaInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
@@ -14,14 +14,14 @@ function calculeReducaoExcentricaInox() {
 };
 
 function calculeReducaoConcentricaInox() {
-    var bocaMaior = parseFloat($("#bocaMaiorReducaoConcentricaInox").val());
-    var bocaMenor = parseFloat($("#bocaMenorReducaoConcentricaInox").val());
-    var espessura = parseFloat($("#espessuraReducaoConcentricaInox").val());
-    var altura = parseFloat($("#alturaReducaoConcentricaInox").val());
-    var geratriz = parseFloat((((bocaMaior - bocaMenor) / 2) ** 2 + (altura ** 2)) ** 0.5);
-    var area = parseFloat((geratriz * 3.14) * ((bocaMaior / 2) + (bocaMenor / 2)));
-    var pesoLiquido = parseFloat((area * pesoAçoInox * espessura) / 1000000);
-    var pesoBruto = parseFloat(0);
+    let bocaMaior = parseFloat($("#bocaMaiorReducaoConcentricaInox").val());
+    let bocaMenor = parseFloat($("#bocaMenorReducaoConcentricaInox").val());
+    let espessura = parseFloat($("#espessuraReducaoConcentricaInox").val());
+    let altura = parseFloat($("#alturaReducaoConcentricaInox").val());
+    let geratriz = parseFloat((((bocaMaior - bocaMenor) / 2) ** 2 + (altura ** 2)) ** 0.5);
+    let area = parseFloat((geratriz * 3.14) * ((bocaMaior / 2) + (bocaMenor / 2)));
+    let pesoLiquido = parseFloat((area * pesoAçoInox * espessura) / 1000000);
+    let pesoBruto = parseFloat(0);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
     $("#pesoLiquidoReducaoConcentricaInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
