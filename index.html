@@ -47,13 +47,17 @@
                             Curvas 90°
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioCurtoInox')">Gomada raio
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioCurtoInox')">Gomada
+                                    raio
                                     curto <b class="boldInox">inox</b></a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioLongoInox')">Gomada raio
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioLongoInox')">Gomada
+                                    raio
                                     longo <b class="boldInox">inox</b></a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioCurtoCarbono')">Gomada raio
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioCurtoCarbono')">Gomada
+                                    raio
                                     curto <b class="boldCarbono">carbono</b></a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioLongoCarbono')">Gomada raio
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva90GomadaRaioLongoCarbono')">Gomada
+                                    raio
                                     longo <b class="boldCarbono">carbono</b></a></li>
                         </ul>
                     </li>
@@ -64,9 +68,11 @@
                             Curvas 45°
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45GomadaRaioCurtoInox')">Gomada raio
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45GomadaRaioCurtoInox')">Gomada
+                                    raio
                                     curto <b class="boldInox">inox</b></a></li>
-                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45GomadaRaioCurtoCarbono')">Gomada raio
+                            <li><a class="dropdown-item" onclick="ShowHide('modalCurva45GomadaRaioCurtoCarbono')">Gomada
+                                    raio
                                     curto <b class="boldCarbono">carbono</b></a></li>
                         </ul>
                     </li>
@@ -119,8 +125,8 @@
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
                             id="dnCurva90GomadaRaioCurtoInox" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90GomadaRaioCurtoInox"
-                            placeholder="Espessura">
+                        <input type="number" class="form-control margin-right-5"
+                            id="espessuraCurva90GomadaRaioCurtoInox" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
                         onclick="calculeCurva90GomadaRaioCurtoInox()">CALCULAR</button>
@@ -128,13 +134,39 @@
 
                 <hr>
 
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioCurtoInox" readonly>
+                <div class="row margin-bottom-50 margin-top-50">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
                 </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioCurtoInox" readonly>
+
+                <div class="row margin-bottom-10">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Largura</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraCurva90GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Comprimento</label>
+                        <input type="text" class="form-control dimensionButton"
+                            id="comprimentoCurva90GomadaRaioCurtoInox" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Area</label>
+                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->
@@ -149,8 +181,8 @@
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
                             id="dnCurva45GomadaRaioCurtoInox" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva45GomadaRaioCurtoInox"
-                            placeholder="Espessura">
+                        <input type="number" class="form-control margin-right-5"
+                            id="espessuraCurva45GomadaRaioCurtoInox" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
                         onclick="calculeCurva45GomadaRaioCurtoInox()">CALCULAR</button>
@@ -158,13 +190,39 @@
 
                 <hr>
 
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45GomadaRaioCurtoInox" readonly>
+                <div class="row margin-bottom-50 margin-top-50">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoCurva45GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
                 </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva45GomadaRaioCurtoInox" readonly>
+
+                <div class="row margin-bottom-10">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraCurva45GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control dimensionButton"
+                            id="comprimentoCurva45GomadaRaioCurtoInox" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control areaButton" id="areaCurva45GomadaRaioCurtoInox"
+                            readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->
@@ -179,8 +237,8 @@
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
                             id="dnCurva90GomadaRaioLongoInox" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90GomadaRaioLongoInox"
-                            placeholder="Espessura">
+                        <input type="number" class="form-control margin-right-5"
+                            id="espessuraCurva90GomadaRaioLongoInox" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
                         onclick="calculeCurva90GomadaRaioLongoInox()">CALCULAR</button>
@@ -188,13 +246,39 @@
 
                 <hr>
 
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioLongoInox" readonly>
+                <div class="row margin-bottom-50 margin-top-50">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioLongoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioLongoInox"
+                            readonly>
+                    </div>
                 </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioLongoInox" readonly>
+
+                <div class="row margin-bottom-10">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraCurva90GomadaRaioLongoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control dimensionButton"
+                            id="comprimentoCurva90GomadaRaioLongoInox" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioLongoInox"
+                            readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->
@@ -270,7 +354,8 @@
 
             <!-- BEGIN modalCurva90GomadaRaioCurtoCarbono -->
             <div class="container modalWindow" id="modalCurva90GomadaRaioCurtoCarbono">
-                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldCarbono">GOMADA RAIO CURTO CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldCarbono">GOMADA RAIO CURTO CARBONO</b>
+                </h3>
 
                 <hr>
 
@@ -278,8 +363,8 @@
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
                             id="dnCurva90GomadaRaioCurtoCarbono" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90GomadaRaioCurtoCarbono"
-                            placeholder="Espessura">
+                        <input type="number" class="form-control margin-right-5"
+                            id="espessuraCurva90GomadaRaioCurtoCarbono" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
                         onclick="calculeCurva90GomadaRaioCurtoCarbono()">CALCULAR</button>
@@ -287,21 +372,47 @@
 
                 <hr>
 
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioCurtoCarbono"
-                        readonly>
+                <div class="row margin-bottom-50 margin-top-50">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
                 </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioCurtoCarbono" readonly>
+
+                <div class="row margin-bottom-10">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Largura</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraCurva90GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Comprimento</label>
+                        <input type="text" class="form-control dimensionButton"
+                            id="comprimentoCurva90GomadaRaioCurtoCarbono" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Area</label>
+                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->
 
             <!-- BEGIN modalCurva45GomadaRaioCurtoCarbono -->
             <div class="container modalWindow" id="modalCurva45GomadaRaioCurtoCarbono">
-                <h3 class="text-center margin-top-10">CURVA 45° <b class="boldCarbono">GOMADA RAIO CURTO CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 45° <b class="boldCarbono">GOMADA RAIO CURTO CARBONO</b>
+                </h3>
 
                 <hr>
 
@@ -309,8 +420,8 @@
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
                             id="dnCurva45GomadaRaioCurtoCarbono" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva45GomadaRaioCurtoCarbono"
-                            placeholder="Espessura">
+                        <input type="number" class="form-control margin-right-5"
+                            id="espessuraCurva45GomadaRaioCurtoCarbono" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
                         onclick="calculeCurva45GomadaRaioCurtoCarbono()">CALCULAR</button>
@@ -318,21 +429,47 @@
 
                 <hr>
 
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45GomadaRaioCurtoCarbono"
-                        readonly>
+                <div class="row margin-bottom-50 margin-top-50">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoCurva45GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
                 </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva45GomadaRaioCurtoCarbono" readonly>
+
+                <div class="row margin-bottom-10">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Largura</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraCurva45GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Comprimento</label>
+                        <input type="text" class="form-control dimensionButton"
+                            id="comprimentoCurva45GomadaRaioCurtoCarbono" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Area</label>
+                        <input type="text" class="form-control areaButton" id="areaCurva45GomadaRaioCurtoCarbono"
+                            readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->
 
             <!-- BEGIN modalCurva90GomadaRaioLongoCarbono -->
             <div class="container modalWindow" id="modalCurva90GomadaRaioLongoCarbono">
-                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldCarbono">GOMADA RAIO LONGO CARBONO</b></h3>
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldCarbono">GOMADA RAIO LONGO CARBONO</b>
+                </h3>
 
                 <hr>
 
@@ -340,8 +477,8 @@
                     <div class="col margin-right-5">
                         <input type="number" class="form-control margin-right-5 margin-bottom-5"
                             id="dnCurva90GomadaRaioLongoCarbono" placeholder="DN">
-                        <input type="number" class="form-control margin-right-5" id="espessuraCurva90GomadaRaioLongoCarbono"
-                            placeholder="Espessura">
+                        <input type="number" class="form-control margin-right-5"
+                            id="espessuraCurva90GomadaRaioLongoCarbono" placeholder="Espessura">
                     </div>
                     <button type="button" class="btn btn-primary"
                         onclick="calculeCurva90GomadaRaioLongoCarbono()">CALCULAR</button>
@@ -349,14 +486,39 @@
 
                 <hr>
 
-                <div class="col margin-bottom-5">
-                    <label class="text-center">Peso líquido</label>
-                    <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioLongoCarbono"
-                        readonly>
+                <div class="row margin-bottom-50 margin-top-50">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioLongoCarbono"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioLongoCarbono"
+                            readonly>
+                    </div>
                 </div>
-                <div class="col  margin-bottom-10">
-                    <label class="text-center">Peso bruto</label>
-                    <input type="text" class="form-control resultButton" id="pesoBrutoCurva90GomadaRaioLongoCarbono" readonly>
+
+                <div class="row margin-bottom-10">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Largura</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraCurva90GomadaRaioLongoCarbono"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Comprimento</label>
+                        <input type="text" class="form-control dimensionButton"
+                            id="comprimentoCurva90GomadaRaioLongoCarbono" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Area</label>
+                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioLongoCarbono"
+                            readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->

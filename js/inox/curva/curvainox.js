@@ -6,8 +6,18 @@ function calculeCurva90GomadaRaioCurtoInox() {
     let pesoBruto = parseFloat(peso * 1.05);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
-    $("#pesoLiquidoCurva90GomadaRaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
-    $("#pesoBrutoCurva90GomadaRaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoLiquidoCurva90GomadaRaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " kg");
+    $("#pesoBrutoCurva90GomadaRaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " kg");
+
+    let largura = parseFloat((diametro * pi) / 2);
+    let comprimento = parseFloat(diametro * pi);
+    let area = parseFloat((largura * comprimento) / 1000000);
+    if (isNaN(largura)) largura = 0;
+    if (isNaN(comprimento)) comprimento = 0;
+    if (isNaN(area)) area = 0;
+    $("#larguraCurva90GomadaRaioCurtoInox").val(largura.toFixed(2).replace(".", ",") + " mm");
+    $("#comprimentoCurva90GomadaRaioCurtoInox").val(comprimento.toFixed(2).replace(".", ",") + " mm");
+    $("#areaCurva90GomadaRaioCurtoInox").val(area.toFixed(2).replace(".", ",") + " m²");
 };
 
 function calculeCurva45GomadaRaioCurtoInox() {
@@ -18,8 +28,18 @@ function calculeCurva45GomadaRaioCurtoInox() {
     let pesoBruto = parseFloat((peso / 2) * 1.05);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
-    $("#pesoLiquidoCurva45GomadaRaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
-    $("#pesoBrutoCurva45GomadaRaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoLiquidoCurva45GomadaRaioCurtoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " kg");
+    $("#pesoBrutoCurva45GomadaRaioCurtoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " kg");
+
+    let largura = parseFloat((diametro * pi) / 2);
+    let comprimento = parseFloat(diametro * pi);
+    let area = parseFloat((largura * comprimento) / 1000000);
+    if (isNaN(largura)) largura = 0;
+    if (isNaN(comprimento)) comprimento = 0;
+    if (isNaN(area)) area = 0;
+    $("#larguraCurva45GomadaRaioCurtoInox").val(largura.toFixed(2).replace(".", ",") + " mm");
+    $("#comprimentoCurva45GomadaRaioCurtoInox").val(comprimento.toFixed(2).replace(".", ",") + " mm");
+    $("#areaCurva45GomadaRaioCurtoInox").val(area.toFixed(2).replace(".", ",") + " m²");
 };
 
 function calculeCurva90GomadaRaioLongoInox() {
@@ -30,6 +50,16 @@ function calculeCurva90GomadaRaioLongoInox() {
     let pesoBruto = parseFloat((peso) * 1.05);
     if (isNaN(pesoLiquido)) pesoLiquido = 0;
     if (isNaN(pesoBruto)) pesoBruto = 0;
-    $("#pesoLiquidoCurva90GomadaRaioLongoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " KG");
-    $("#pesoBrutoCurva90GomadaRaioLongoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " KG");
+    $("#pesoLiquidoCurva90GomadaRaioLongoInox").val(pesoLiquido.toFixed(2).replace(".", ",") + " kg");
+    $("#pesoBrutoCurva90GomadaRaioLongoInox").val(pesoBruto.toFixed(2).replace(".", ",") + " kg");
+
+    let largura = parseFloat((diametro * pi) / 2);
+    let comprimento = parseFloat(diametro * pi);
+    let area = parseFloat((largura * comprimento) / 1000000);
+    if (isNaN(largura)) largura = 0;
+    if (isNaN(comprimento)) comprimento = 0;
+    if (isNaN(area)) area = 0;
+    $("#larguraCurva90GomadaRaioLongoInox").val(largura.toFixed(2).replace(".", ",") + " mm");
+    $("#comprimentoCurva90GomadaRaioLongoInox").val(comprimento.toFixed(2).replace(".", ",") + " mm");
+    $("#areaCurva90GomadaRaioLongoInox").val(area.toFixed(2).replace(".", ",") + " m²");
 };

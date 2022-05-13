@@ -6,7 +6,9 @@ var pi = parseFloat(3.14);
 //END Global variables
 
 $(document).ready(function () {
-  $('.resultButton').val(parseFloat(0).toFixed(2) + ' KG');
+  $('.resultButton').val(parseFloat(0).toFixed(2) + ' kg');
+  $('.dimensionButton').val(parseFloat(0).toFixed(2) + ' mm');
+  $('.areaButton').val(parseFloat(0).toFixed(2) + ' m²');
   $('.modalWindow').hide();
 
   $('.toggleMaterial').css('background-color', 'rgb(10, 10, 10)');
