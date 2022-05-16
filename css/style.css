@@ -11,9 +11,11 @@
   border-radius: 10px;
 }
 
-.main,
-.modalWindow {
-  margin-top: 15%;
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: grid;
+  align-items: center;
 }
 
 .navbar-brand {
