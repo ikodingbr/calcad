@@ -100,6 +100,21 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            TE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" onclick="ShowHide('modalTeReducaoInox')">Redução
+                                    <b class="boldInox">inox</b></a>
+                            </li>
+                            <li><a class="dropdown-item" onclick="ShowHide('modalTeReducaoCarbono')">Redução
+                                    <b class="boldCarbono">carbono</b></a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -164,8 +179,7 @@
                     </div>
                     <div class="col ">
                         <label class="text-center">Area</label>
-                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioCurtoInox"
-                            readonly>
+                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioCurtoInox" readonly>
                     </div>
                 </div>
             </div>
@@ -220,8 +234,7 @@
                     </div>
                     <div class="col ">
                         <label class="text-center">Peso bruto</label>
-                        <input type="text" class="form-control areaButton" id="areaCurva45GomadaRaioCurtoInox"
-                            readonly>
+                        <input type="text" class="form-control areaButton" id="areaCurva45GomadaRaioCurtoInox" readonly>
                     </div>
                 </div>
             </div>
@@ -276,8 +289,7 @@
                     </div>
                     <div class="col ">
                         <label class="text-center">Peso bruto</label>
-                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioLongoInox"
-                            readonly>
+                        <input type="text" class="form-control areaButton" id="areaCurva90GomadaRaioLongoInox" readonly>
                     </div>
                 </div>
             </div>
@@ -377,8 +389,8 @@
 
                     <div class="col">
                         <label class="text-center">Peso líquido</label>
-                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioCurtoCarbono"
-                            readonly>
+                        <input type="text" class="form-control resultButton"
+                            id="pesoLiquidoCurva90GomadaRaioCurtoCarbono" readonly>
                     </div>
                     <div class="col ">
                         <label class="text-center">Peso bruto</label>
@@ -392,8 +404,8 @@
 
                     <div class="col">
                         <label class="text-center">Largura</label>
-                        <input type="text" class="form-control dimensionButton" id="larguraCurva90GomadaRaioCurtoCarbono"
-                            readonly>
+                        <input type="text" class="form-control dimensionButton"
+                            id="larguraCurva90GomadaRaioCurtoCarbono" readonly>
                     </div>
                     <div class="col ">
                         <label class="text-center">Comprimento</label>
@@ -434,8 +446,8 @@
 
                     <div class="col">
                         <label class="text-center">Peso líquido</label>
-                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva45GomadaRaioCurtoCarbono"
-                            readonly>
+                        <input type="text" class="form-control resultButton"
+                            id="pesoLiquidoCurva45GomadaRaioCurtoCarbono" readonly>
                     </div>
                     <div class="col ">
                         <label class="text-center">Peso bruto</label>
@@ -449,8 +461,8 @@
 
                     <div class="col">
                         <label class="text-center">Largura</label>
-                        <input type="text" class="form-control dimensionButton" id="larguraCurva45GomadaRaioCurtoCarbono"
-                            readonly>
+                        <input type="text" class="form-control dimensionButton"
+                            id="larguraCurva45GomadaRaioCurtoCarbono" readonly>
                     </div>
                     <div class="col ">
                         <label class="text-center">Comprimento</label>
@@ -491,8 +503,8 @@
 
                     <div class="col">
                         <label class="text-center">Peso líquido</label>
-                        <input type="text" class="form-control resultButton" id="pesoLiquidoCurva90GomadaRaioLongoCarbono"
-                            readonly>
+                        <input type="text" class="form-control resultButton"
+                            id="pesoLiquidoCurva90GomadaRaioLongoCarbono" readonly>
                     </div>
                     <div class="col ">
                         <label class="text-center">Peso bruto</label>
@@ -506,8 +518,8 @@
 
                     <div class="col">
                         <label class="text-center">Largura</label>
-                        <input type="text" class="form-control dimensionButton" id="larguraCurva90GomadaRaioLongoCarbono"
-                            readonly>
+                        <input type="text" class="form-control dimensionButton"
+                            id="larguraCurva90GomadaRaioLongoCarbono" readonly>
                     </div>
                     <div class="col ">
                         <label class="text-center">Comprimento</label>
@@ -591,6 +603,63 @@
                     <label class="text-center">Peso bruto</label>
                     <input type="text" class="form-control resultButton" id="pesoBrutoReducaoConcentricaCarbono"
                         readonly>
+                </div>
+            </div>
+            <!-- END -->
+
+            <!-- BEGIN modalTeReducaoInox -->
+            <div class="container modalWindow" id="modalTeReducaoInox">
+                <h3 class="text-center margin-top-10">CURVA 90° <b class="boldInox">GOMADA RAIO CURTO INOX</b></h3>
+
+                <hr>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col margin-right-5">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="bocaMaiorTeReducaoInox" placeholder="Boca maior">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="bocaMenorTeReducaoInox" placeholder="Boca menor">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="comprimentoTeReducaoInox" placeholder="Comprimento">
+                        <input type="number" class="form-control margin-right-5 margin-bottom-5"
+                            id="alturaTeReducaoInox" placeholder="Altura">
+                        <input type="number" class="form-control margin-right-5" id="espessuraTeReducaoInox"
+                            placeholder="Espessura">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="calculeTeReducaoInox()">CALCULAR</button>
+                </div>
+
+                <hr>
+
+                <div class="row margin-bottom-20">
+                    <h3 class="text-center">PESOS</h3>
+
+                    <div class="col">
+                        <label class="text-center">Peso líquido</label>
+                        <input type="text" class="form-control resultButton" id="pesoLiquidoTeReducaoInox" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Peso bruto</label>
+                        <input type="text" class="form-control resultButton" id="pesoBrutoTeReducaoInox" readonly>
+                    </div>
+                </div>
+
+                <div class="row margin-bottom-20">
+                    <h3 class="text-center">DIMENSÕES</h3>
+
+                    <div class="col">
+                        <label class="text-center">Largura</label>
+                        <input type="text" class="form-control dimensionButton" id="larguraTeReducaoInox" readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Comprimento</label>
+                        <input type="text" class="form-control dimensionButton" id="dimComprimentoTeReducaoInox"
+                            readonly>
+                    </div>
+                    <div class="col ">
+                        <label class="text-center">Area</label>
+                        <input type="text" class="form-control areaButton" id="areaTeReducaoInox" readonly>
+                    </div>
                 </div>
             </div>
             <!-- END -->
