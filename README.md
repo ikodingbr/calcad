@@ -3,4 +3,4 @@
 
 <ul>
     <li>Made by: Gabriel Gonçalves Freias</li>
-<ul/>
+</ul>
