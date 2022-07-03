@@ -12,5 +12,12 @@
 # Used
     
 <ul>
-    <li></li>
+    <li>Bootstrap 5.1.3</li>
+    <li>jQuery 3.6.0</li>
+</ul>
+
+# Objective
+
+<ul>
+    <li>I developed this application to help my routine and that of my teammates in calculating the weight of carbon steel and stainless steel parts.</li>
 </ul>
