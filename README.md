@@ -1,4 +1,4 @@
-<h1 text="center"> CalCAD </h1>
+<h1 align="center"> CalCAD </h1>
 
 
 <ul>
