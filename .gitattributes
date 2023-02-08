@@ -1,0 +1,7 @@
+*.blade.php linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
+
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
