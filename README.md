@@ -1,23 +1,16 @@
-<h1 align="center"> CalCAD </h1>
+# calcad
 
-<img src="https://github.com/gabrielgoncalfreitas/calcad/blob/main/img/CalCAD-Google-Chrome-2022-07-02-23-11-39.gif?raw=true">
+A new Flutter project.
 
-# Author
+## Getting Started
 
-<ul>
-    <li>Gabriel Gonçalves Freitas</li>
-</ul>
-    
+This project is a starting point for a Flutter application.
 
-# Used
-    
-<ul>
-    <li>Bootstrap 5.1.3</li>
-    <li>jQuery 3.6.0</li>
-</ul>
+A few resources to get you started if this is your first Flutter project:
 
-# Objective
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-<ul>
-    <li>I developed this application to help my routine and that of my teammates in calculating the weight of carbon steel and stainless steel parts.</li>
-</ul>
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
