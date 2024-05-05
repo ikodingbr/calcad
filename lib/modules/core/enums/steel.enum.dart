@@ -1,0 +1,4 @@
+enum SteelEnum {
+  carbon,
+  inox,
+}

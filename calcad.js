@@ -55,9 +55,9 @@ function calcularPesoDaPeca(
 
 const densidadeDoAco = 0.785;
 const espessura = 9.52;
-const d1 = 1524;
-const d2 = 1220;
-const altura = 711;
+const d1 = 508;
+const d2 = 508;
+const altura = 508;
 const d1MenosEspessura = d1 - espessura;
 const d2MenosEspessura = d2 - espessura;
 
