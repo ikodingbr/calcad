@@ -6,12 +6,14 @@ class HomeSelectorWidget extends StatelessWidget {
   final String svgPath;
   final String label;
   final String path;
+  final double size;
 
   const HomeSelectorWidget({
     super.key,
     required this.svgPath,
     required this.label,
     required this.path,
+    required this.size
   });
 
   @override
@@ -27,8 +29,8 @@ class HomeSelectorWidget extends StatelessWidget {
         highlightColor: Theme.of(context).primaryColor.withOpacity(0.5),
         borderRadius: BorderRadius.circular(10),
         child: SizedBox(
-          height: 200,
-          width: 200,
+          height: size,
+          width: size,
           child: Flex(
             direction: Axis.vertical,
             crossAxisAlignment: CrossAxisAlignment.center,

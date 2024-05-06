@@ -5,6 +5,7 @@ import 'package:calcad/modules/cones/modules/concentric/domain/stores/concentric
 
 class ConcentricConeRadioWidget extends StatelessWidget {
   final String title;
+  final double? width;
   final SteelEnum value;
   final ConcentricConeStore store;
 
@@ -13,6 +14,7 @@ class ConcentricConeRadioWidget extends StatelessWidget {
     required this.title,
     required this.value,
     required this.store,
+    this.width,
   });
 
   @override
@@ -20,7 +22,7 @@ class ConcentricConeRadioWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5),
       child: SizedBox(
-        width: (MediaQuery.of(context).size.width / 2) - 20,
+        width: width,
         child: RadioButton<SteelEnum>(
           title: title,
           value: value,

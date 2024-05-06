@@ -16,21 +16,19 @@ class ConcentricConeTextFormFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(5),
-        child: TextFormField(
-          style: const TextStyle(fontSize: 14.5),
-          decoration: InputDecoration(
-            isDense: true,
-            contentPadding: const EdgeInsets.all(13),
-            labelText: label,
-            border: const OutlineInputBorder(),
-          ),
-          keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: false),
-          onChanged: (value) => onChanged(value),
-          initialValue: value == '0.0' ? '' : value,
+    return Padding(
+      padding: const EdgeInsets.all(5),
+      child: TextFormField(
+        style: const TextStyle(fontSize: 14.5),
+        decoration: InputDecoration(
+          isDense: true,
+          contentPadding: const EdgeInsets.all(13),
+          labelText: label,
+          border: const OutlineInputBorder(),
         ),
+        keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: false),
+        onChanged: (value) => onChanged(value),
+        initialValue: value == '0.0' ? '' : value,
       ),
     );
   }

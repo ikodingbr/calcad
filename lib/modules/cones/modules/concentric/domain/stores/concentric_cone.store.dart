@@ -1,13 +1,15 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:calcad/modules/core/enums/steel.enum.dart';
+import 'package:calcad/modules/cones/modules/concentric/domain/models/concentric_cone.model.dart';
 
 class ConcentricConeStore extends ChangeNotifier {
-  double d1 = 0;
-  double d2 = 0;
-  double h = 0;
-  double thickness = 0;
+  final model = Modular.get<ConcentricConeModel>();
+
+  double d1 = 1524;
+  double d2 = 1220;
+  double h = 711;
+  double thickness = 9.52;
   double steelDensity = 0.785;
   SteelEnum steel = SteelEnum.carbon;
   double d1MinusThickness = 0;
@@ -29,91 +31,63 @@ class ConcentricConeStore extends ChangeNotifier {
 
   void setSteel(SteelEnum steel) {
     this.steel = steel;
+    calculate();
     notifyListeners();
   }
 
   void setD1(String? d1) {
     this.d1 = d1 == null || d1 == '' ? 0 : double.parse(d1);
+    calculate();
     notifyListeners();
   }
 
   void setD2(String? d2) {
     this.d2 = d2 == null || d2 == '' ? 0 : double.parse(d2);
+    calculate();
     notifyListeners();
   }
 
   void setH(String? h) {
     this.h = h == null || h == '' ? 0 : double.parse(h);
+    calculate();
     notifyListeners();
   }
 
   void setThickness(String? thickness) {
     this.thickness = thickness == null || thickness == '' ? 0 : double.parse(thickness);
+    calculate();
     notifyListeners();
   }
 
   void calculate() {
     if (d1 != 0 && d2 != 0 && h != 0 && thickness != 0) {
       steelDensity = steel == SteelEnum.carbon ? 0.785 : 0.79;
-      d1MinusThickness = calculateD1MinusThickness();
-      d2MinusThickness = calculateD2MinusThickness();
-      hypotenuse = calculateHypotenuse();
-      greaterGeneratrix = calculateGreaterGeneratrix();
-      minorGeneratrix = calculateMinorGeneratrix();
-      alpha = calculateAlpha();
-      greaterChord = calculateGreaterChord();
-      minorChord = calculateMinorChord();
-      sheetWidth = calculateSheetWidth();
-      sheetHeight = calculateSheetHeight();
-      sheetWeight = calculateSheetWeight();
-      sheetArea = calculateSheetArea();
-      d1Area = calculateD1Area();
-      d2Area = calculateD2Area();
-      weightPerSquareMeter = calculateWeightPerSquareMeter();
-      productWeight = calculateProductWeight();
+
+      model.setD1(d1);
+      model.setD2(d2);
+      model.setH(h);
+      model.setThickness(thickness);
+      model.setSteelDensity(steelDensity);
+      model.calculate();
+
+      d1MinusThickness = model.d1MinusThickness;
+      d2MinusThickness = model.d2MinusThickness;
+      hypotenuse = model.hypotenuse;
+      greaterGeneratrix = model.greaterGeneratrix;
+      minorGeneratrix = model.minorGeneratrix;
+      alpha = model.alpha;
+      greaterChord = model.greaterChord;
+      minorChord = model.minorChord;
+      sheetWidth = model.sheetWidth;
+      sheetHeight = model.sheetHeight;
+      sheetWeight = model.sheetWeight;
+      sheetArea = model.sheetArea;
+      d1Area = model.d1Area;
+      d2Area = model.d2Area;
+      weightPerSquareMeter = model.weightPerSquareMeter;
+      productWeight = model.productWeight;
     }
 
     notifyListeners();
   }
-
-  Column dataToTextList() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        Text("d1MinusThickness: ${d1MinusThickness.toStringAsFixed(2)}"),
-        Text("d2MinusThickness: ${d2MinusThickness.toStringAsFixed(2)}"),
-        Text("hypotenuse: ${hypotenuse.toStringAsFixed(2)}"),
-        Text("greaterGeneratrix: ${greaterGeneratrix.toStringAsFixed(2)}"),
-        Text("minorGeneratrix: ${minorGeneratrix.toStringAsFixed(2)}"),
-        Text("alpha: ${alpha.toStringAsFixed(2)}"),
-        Text("greaterChord: ${greaterChord.toStringAsFixed(2)}"),
-        Text("minorChord: ${minorChord.toStringAsFixed(2)}"),
-        Text("sheetWidth: ${sheetWidth.toStringAsFixed(2)}"),
-        Text("sheetHeight: ${sheetHeight.toStringAsFixed(2)}"),
-        Text("sheetWeight: ${sheetWeight.toStringAsFixed(2)}"),
-        Text("sheetArea: ${sheetArea.toStringAsFixed(2)}"),
-        Text("d1Area: ${d1Area.toStringAsFixed(2)}"),
-        Text("d2Area: ${d2Area.toStringAsFixed(2)}"),
-        Text("weightPerSquareMeter: ${weightPerSquareMeter.toStringAsFixed(2)}"),
-      ],
-    );
-  }
-
-  double calculateD1MinusThickness() => d1 - thickness;
-  double calculateD2MinusThickness() => d2 - thickness;
-  double calculateHypotenuse() => (d1MinusThickness - d2MinusThickness) / 2;
-  double calculateGreaterGeneratrix() => ((d1MinusThickness / 2) * sqrt(pow(h, 2) + pow(hypotenuse, 2))) / hypotenuse;
-  double calculateMinorGeneratrix() => greaterGeneratrix - sqrt(pow(h, 2) + pow(hypotenuse, 2));
-  double calculateAlpha() => ((180 * (d1MinusThickness / 2)) / greaterGeneratrix) * 2;
-  double alphaToRadians(alpha) => (alpha * pi) / 180;
-  double calculateGreaterChord() => 2 * greaterGeneratrix * sin(alphaToRadians(alpha) / 2);
-  double calculateMinorChord() => 2 * minorGeneratrix * sin(alphaToRadians(alpha) / 2);
-  double calculateSheetWidth() => greaterChord;
-  double calculateSheetHeight() => greaterGeneratrix - sqrt(pow(minorGeneratrix, 2) - pow(minorChord / 2, 2));
-  double calculateSheetWeight() => (sheetWidth * sheetHeight * steelDensity * thickness) / 100000;
-  double calculateSheetArea() => (sheetWidth * sheetHeight) / 1000000;
-  double calculateD1Area() => (d1MinusThickness * pi) / 2;
-  double calculateD2Area() => (d2MinusThickness * pi) / 2;
-  double calculateWeightPerSquareMeter() => steelDensity * thickness;
-  double calculateProductWeight() => ((d1Area + d2Area) * (greaterGeneratrix - minorGeneratrix) * weightPerSquareMeter) / 100000;
 }
