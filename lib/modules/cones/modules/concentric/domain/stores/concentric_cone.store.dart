@@ -61,7 +61,7 @@ class ConcentricConeStore extends ChangeNotifier {
 
   void calculate() {
     if (d1 != 0 && d2 != 0 && h != 0 && thickness != 0) {
-      steelDensity = steel == SteelEnum.carbon ? 0.785 : 0.79;
+      steelDensity = steel == SteelEnum.carbon ? 0.785 : 0.792;
 
       model.setD1(d1);
       model.setD2(d2);
